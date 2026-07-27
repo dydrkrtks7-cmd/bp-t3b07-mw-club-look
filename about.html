@@ -1,359 +1,93 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-theme="indigo" data-build="9f2c7b8e">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>정보 | 망원 클럽 룩북</title>
-    <meta name="description" content="망원 클럽 룩북 – 진짜 스타일은 여기서 시작된다. 클럽별 드레스 코드, 위치, 운영 시간까지. 전화 문의 010-6279-0862.">
-    <meta name="keywords" content="망원 클럽 룩북 정보, 망원 클럽 드레스 코드, 망원동 클럽 위치, 클럽 운영시간, 망원 핫플, 클럽 패션 정보">
-    <meta name="bpaas-design-system" content="editorial-apple">
-    <meta name="bpaas-design-theme" content="kr-warm-grid">
-    <link rel="canonical" href="https://t3b07-mw-club-look.vercel.app/info">
-    <meta property="og:title" content="정보 | 망원 클럽 룩북">
-    <meta property="og:description" content="망원 클럽 룩북 정보 페이지 – 클럽별 스타일 가이드, 위치, 시간. 망원 클럽의 모든 것.">
-    <meta property="og:image" content="https://t3b07-mw-club-look.vercel.app/og-info.jpg">
-    <meta property="og:url" content="https://t3b07-mw-club-look.vercel.app/info">
-    <meta name="twitter:card" content="summary_large_image">
-    <style>
-        /* Reset & Base */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background-color: #faf8f5;
-            color: #1a1a1a;
-            line-height: 1.6;
-            padding-top: 70px;
-        }
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        /* Typography */
-        h1, h2, h3, h4 {
-            font-weight: 600;
-            letter-spacing: -0.02em;
-        }
-        h1 {
-            font-size: 2.8rem;
-            line-height: 1.2;
-            margin-bottom: 24px;
-            font-weight: 700;
-        }
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #e6ddd0;
-            padding-bottom: 8px;
-        }
-        h3 {
-            font-size: 1.4rem;
-            margin-bottom: 12px;
-        }
-        p {
-            margin-bottom: 16px;
-            color: #2c2c2c;
-        }
-        a {
-            color: #b45f3b;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        a:hover {
-            color: #7a3e24;
-        }
-        /* Header & Navigation */
-        header {
-            background: #ffffffec;
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid #e6ddd0;
-            padding: 0 24px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            height: 70px;
-            display: flex;
-            align-items: center;
-        }
-        .header-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            color: #1a1a1a;
-        }
-        .logo span {
-            color: #b45f3b;
-        }
-        nav {
-            display: flex;
-            gap: 32px;
-            align-items: center;
-        }
-        nav a {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: #2c2c2c;
-            padding: 8px 0;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.2s, color 0.2s;
-        }
-        nav a:hover {
-            border-bottom-color: #b45f3b;
-            color: #b45f3b;
-        }
-        nav a.active {
-            border-bottom-color: #b45f3b;
-            color: #b45f3b;
-        }
-        .tel-link {
-            background: #b45f3b;
-            color: #fff !important;
-            padding: 8px 18px !important;
-            border-radius: 40px;
-            font-weight: 600;
-            border: none !important;
-            transition: background 0.2s;
-        }
-        .tel-link:hover {
-            background: #7a3e24;
-            color: #fff !important;
-        }
-        /* Hamburger menu (반응형) */
-        .hamburger-menu {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-            background: none;
-            border: none;
-            padding: 4px;
-        }
-        .hamburger-menu span {
-            width: 28px;
-            height: 3px;
-            background: #1a1a1a;
-            border-radius: 4px;
-            transition: 0.2s;
-        }
-        /* 모바일 nav */
-        .nav-mobile {
-            display: none;
-            position: fixed;
-            top: 70px;
-            left: 0;
-            width: 100%;
-            background: #faf8f5;
-            border-bottom: 1px solid #e6ddd0;
-            padding: 20px 24px;
-            flex-direction: column;
-            gap: 16px;
-            z-index: 999;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-        }
-        .nav-mobile a {
-            font-size: 1.1rem;
-            padding: 8px 0;
-        }
-        .nav-mobile .tel-link {
-            text-align: center;
-        }
-        /* responsive-768 */
-        @media (max-width: 768px) {
-            nav {
-                display: none;
-            }
-            .hamburger-menu {
-                display: flex;
-            }
-            .nav-mobile.open {
-                display: flex;
-            }
-            h1 {
-                font-size: 2.2rem;
-            }
-            .container {
-                padding: 0 16px;
-            }
-        }
-        /* layout */
-        .hero-info {
-            padding: 40px 0 20px;
-        }
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin: 40px 0;
-        }
-        .info-card {
-            background: #ffffff;
-            border-radius: 24px;
-            padding: 28px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.04);
-            border: 1px solid #ede8df;
-        }
-        .info-card h3 {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .info-card .label {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            color: #8a7a6a;
-            margin-bottom: 4px;
-        }
-        .faq-item {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 20px 24px;
-            margin-bottom: 12px;
-            border-left: 4px solid #b45f3b;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-        }
-        .faq-item strong {
-            display: block;
-            font-size: 1.1rem;
-            margin-bottom: 6px;
-        }
-        .footer-note {
-            text-align: center;
-            padding: 40px 0 60px;
-            color: #6b5d4e;
-            border-top: 1px solid #e6ddd0;
-            margin-top: 40px;
-        }
-        @media (max-width: 768px) {
-            .info-grid {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>망원 클럽 룩북 — 정보</title>
+  <meta name="description" content="망원 클럽을 운영하거나 참여하려는 사람들을 위한 상세 정보 페이지. 규모, 시간대, 목적별 체크포인트와 실전 팁을 한눈에 정리했습니다.">
+  <meta name="keywords" content="망원 클럽, 정보, 운영 가이드, 규모별 클럽, 시간대별 클럽, 목적별 클럽">
+  <link rel="canonical" href="https://mangwon-club-note.link-hub.org/about.html">
+  <meta property="og:title" content="망원 클럽 룩북 — 정보">
+  <meta property="og:description" content="클럽 운영에 필요한 모든 정보를 여기서 확인하세요.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mangwon-club-note.link-hub.org/about.html">
+  <meta property="og:image" content="https://mangwon-club-note.link-hub.org/assets/og-image-info.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS 핵심 (변경 금지) -->
+  <style>
+    /* 기본 폰트 설정 */ html {font-family: system-ui, sans-serif; line-height: 1.5;}
+    h1, h2, h3 {margin: 0; font-weight: 600;}
+    h1 {font-size: 2.5rem; color: #2c3e50;}
+    h2 {font-size: 2rem; color: #34495e;}
+    p {margin: 1rem 0; color: #444;}
+    small {font-size: 0.85rem; color: #777;}
+    /* 레이아웃 */
+    body {margin:0; background:#f5f7fa; display:flex; flex-direction:column; min-height:100vh;}
+    .v-box-lhsl {display:flex; flex-direction:column; gap:1.5rem; padding:2rem; background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+    .v-box-lhsl a {color:#1e90ff; text-decoration:none;}
+    .v-box-lhsl a:hover {text-decoration:underline;}
+    .main-content {flex:1; max-width:960px; margin:auto; padding:1rem;}
+    /* 히어로 */
+    .x-head-rt06 {position:relative; padding:4rem 1rem; text-align:center; background:linear-gradient(135deg,#4b6cb7,#182848); color:#fff;}
+    .x-head-rt06::before {content:""; position:absolute; inset:0; background:url('https://mangwon-club-note.link-hub.org/assets/hero-bg.jpg') center/cover; opacity:0.2;}
+    .x-head-rt06 h1 {font-size:3rem; margin-bottom:0.5rem;}
+  </style>
 </head>
 <body>
-
-<header>
-    <div class="header-inner">
-        <div class="logo">망원<span>룩북</span></div>
-        <nav>
-            <a href="/">홈</a>
-            <a href="/lookbook">룩북</a>
-            <a href="/info" class="active">정보</a>
-            <a href="/map">오시는 길</a>
-            <a href="tel:01062790862" class="tel-link">010-6279-0862</a>
-        </nav>
-        <button class="hamburger-menu" id="hamburger" aria-label="메뉴 열기">
-            <span></span><span></span><span></span>
-        </button>
-    </div>
-</header>
-
-<!-- 모바일 네비게이션 -->
-<div class="nav-mobile" id="navMobile">
-    <a href="/">홈</a>
+  <!-- 네비게이션 (전체 페이지 공통) -->
+  <nav class="v-box-lhsl">
+    <a href="/"><strong>홈</strong></a>
     <a href="/lookbook">룩북</a>
-    <a href="/info" class="active">정보</a>
-    <a href="/map">오시는 길</a>
-    <a href="tel:01062790862" class="tel-link">📞 010-6279-0862</a>
-</div>
+    <a href="/info">정보</a>
+    <a href="/contact">연락처</a>
+  </nav>
 
-<main>
-    <div class="container hero-info">
-        <h1>클럽 룩북<br>정보 & 가이드</h1>
-        <p style="font-size: 1.2rem; max-width: 640px;">망원 클럽의 진짜 분위기, 드레스 코드, 시간표. 내가 가기 전에 알았으면 좋았을 꿀팁들.</p>
-    </div>
+  <!-- 히어로 섹션 -->
+  <section class="x-head-rt06">
+    <h1>망원 클럽 정보</h1>
+    <p>클럽을 운영하거나 참여할 때 반드시 알아야 할 핵심 포인트를 한눈에 정리했습니다. 규모, 시간대, 목적별로 차별화된 전략을 제시합니다.</p>
+  </section>
 
-    <div class="container">
-        <div class="info-grid">
-            <div class="info-card">
-                <div class="label">📍 위치 & 분위기</div>
-                <h3>망원동 클럽 거리</h3>
-                <p>망원역 3번 출구에서 도보 5분, 본격적인 클럽 골목. 주말엔 사람들로 북적이고, 골목마다 음악이 흘러나와. <strong>입구에서 줄 서는 클럽</strong>도 있고, 그냥 들어가도 되는 곳도 있음.</p>
-                <p>👉 <a href="/map">구체적인 지도 보기</a> (곧 업데이트)</p>
-            </div>
-            <div class="info-card">
-                <div class="label">⏰ 운영 시간</div>
-                <h3>클럽별 타임</h3>
-                <p>보통 <strong>오후 10시</strong>부터 문 열고, 새벽 2~3시가 피크. 일요일엔 쉬는 곳도 있음. 아래 FAQ에서 자세히 확인.</p>
-                <p>🕐 <strong>팁:</strong> 11시 넘어서 가면 입장료가 더 비싸지거나 줄이 길어. 9시 30분쯤 도착하면 여유롭게 입장 가능.</p>
-            </div>
-            <div class="info-card">
-                <div class="label">👕 드레스 코드</div>
-                <h3>스타일 가이드</h3>
-                <p>망원 클럽은 <strong>자유로운 편</strong>이지만, 운동복이나 슬리퍼는 눈치 보여. 나도 한 번 반바지에 샌들 갔다가 입구에서 거절당한 썰 있음.</p>
-                <p>✔️ <strong>추천:</strong> 흰 티 + 청바지 + 스니커즈 (절대 안 틀림) / <br>✔️ 여성: 원피스나 크롭 탑 + 하이웨이스트 팬츠. </p>
-            </div>
-            <div class="info-card">
-                <div class="label">🎵 음악 장르</div>
-                <h3>클럽별 사운드</h3>
-                <p>힙합/얼터너티브가 주류. 일부 클럽은 테크노나 하우스도 틀어. 인스타 라이브로 미리 분위기 체크 가능.</p>
-                <p>🎧 내가 자주 가는 클럽은 <strong>‘베이스’</strong> — 힙합 위주인데 가끔 2000년대 팝도 나와서 좋아.</p>
-            </div>
-        </div>
+  <main class="main-content">
+    <!-- 섹션 1: 클럽 개요 -->
+    <section class="v-box-lhsl">
+      <h2>망원 클럽 개요</h2>
+      <p>망원 지역은 다양한 문화 시설, 카페, 공원 등이 밀집해 있어 클럽 활동에 최적의 환경을 제공합니다. 특히 젊은 층과 문화예술가들이 활발히 교류하므로, 새로운 사람을 만나고 네트워킹을 확장하기에 좋은 장소입니다.</p>
+      <p>클럽의 기본 목적은 공동의 관심사를 중심으로 정기 모임을 갖고, 교육·문화·레저 등 다양한 활동을 통해 회원간 유대감을 강화하는 것입니다. 지역 특성을 활용한 현장 학습, 길거리 공연, 플리마켓 등은 망원 클럽만의 차별화된 프로그램으로 자리 잡고 있습니다.</p>
+    </section>
 
-        <!-- FAQ 섹션 -->
-        <h2 style="margin-top: 48px;">자주 묻는 질문</h2>
-        <div style="margin: 24px 0 48px;">
-            <div class="faq-item">
-                <strong>🆔 신분증 꼭 필요해?</strong>
-                <p>당연하지. 주말에는 20대 초반처럼 보여도 신분증 검사함. 나도 작년에 면허증 깜빡하고 집에 다시 다녀온 적 있음. 여권, 운전면허, 주민등록증 다 됨.</p>
-            </div>
-            <div class="faq-item">
-                <strong>💵 입장료 보통 얼마?</strong>
-                <p>보통 1~2만 원 선. 얼리버드(10시 전)는 5천 원인 곳도 있음. 현금보다 카드 많이 받는데, 간혹 현금만 받는 클럽 있으니 만원 정도 챙겨가.</p>
-            </div>
-            <div class="faq-item">
-                <strong>📸 사진 찍어도 돼?</strong>
-                <p>플래시 터트리거나 비즈니스 목적 아니면 보통 ok. 하지만 클럽마다 룰이 다르니 입구에 스티커 확인. ‘룩북’ 찍는 사람들 많아서 부담 없이 찍어도 돼.</p>
-            </div>
-            <div class="faq-item">
-                <strong>🧥 겉옷 보관함 있어?</strong>
-                <p>대부분 있음. 유료(2~3천 원)인 경우 많고, 간혹 무료 클럽도 있음. 겨울엔 패딩 보관 꼭 하자. 잃어버리면 곤란하니까.</p>
-            </div>
-            <div class="faq-item">
-                <strong>🚽 화장실 줄?</strong>
-                <p>여자 화장실은 항상 줄. 남자 화장실은 상대적으로 쾌적. 클럽 안에 화장실이 하나뿐인 곳이 많으니 미리미리 다녀와.</p>
-            </div>
-        </div>
+    <!-- 섹션 2: 규모별 운영 팁 -->
+    <section class="v-box-lhsl">
+      <h2>규모별 운영 팁</h2>
+      <p><strong>소규모(10명 이하)</strong> 클럽은 친밀한 분위기를 유지하기 위해 개인 맞춤형 일정 관리가 필수입니다. 회원 각각의 관심사와 시간대를 파악해 최소한의 회의로 효율적인 진행을 도모하세요. 또한, 소규모 모임은 장소 선택이 자유로워 카페, 스터디룸, 개인 주택 등을 활용할 수 있습니다.</p>
+      <p><strong>대규모(30명 이상)</strong> 클럽은 구조적인 운영 체계가 필요합니다. 담당자를 지정해 역할을 분담하고, 사전 설문을 통해 참가자의 기대치를 파악한 뒤 프로그램을 설계합니다. 대형 장소(공공 도서관, 커뮤니티 센터)를 예약하고, 사전 안전 점검 및 비상 연락망 구축을 반드시 진행하세요.</p>
+    </section>
 
-        <!-- 개인적인 한마디 -->
-        <div style="background: #ede8df; border-radius: 24px; padding: 32px; margin-bottom: 40px;">
-            <h3 style="margin-bottom: 12px;">🙋‍♂️ 내가 망원 클럽을 사랑하는 이유</h3>
-            <p>처음엔 홍대만 갔었는데, 망원은 뭔가 더 로컬이고 자유로운 느낌이야. 클럽마다 개성이 확실하고, 사람들도 꾸민 듯 안 꾸민 듯. 내 스타일을 그대로 보여줘도 되는 곳. 가끔 클럽 밖에서 포장마차에서 만난 사람들이랑 친구가 되기도 함. 망원 클럽 룩북은 그런 진짜 스타일을 기록하려고 만든 거야.</p>
-            <p>— <strong>운영자</strong> (클럽 덕후, 8년 차 망원 거주자)</p>
-        </div>
+    <!-- 섹션 3: 시간대별 주의사항 -->
+    <section class="v-box-lhsl">
+      <h2>시간대별 주의사항</h2>
+      <p><strong>이른 시간(오전 9시~오후 1시)</strong>은 주로 워크숍, 교육, 스터디와 같은 집중 활동에 적합합니다. 이때는 조용한 환경과 충분한 조명, 그리고 카페 같은 편의시설 근접 여부를 검토해야 합니다.</p>
+      <p><strong>늦은 시간(오후 6시 이후)</strong>은 네트워킹 파티, 공연, 야외 활동에 최적화됩니다. 조명, 소음 관리, 그리고 교통 접근성을 고려해 장소를 선정하고, 늦은 시간에도 안전하게 귀가할 수 있는 대중교통 정보를 사전 제공하는 것이 중요합니다.</p>
+    </section>
 
-        <div style="background: #ffffff; border-radius: 20px; padding: 28px; border: 1px solid #e6ddd0; margin-bottom: 32px;">
-            <h3>📞 연락처 & 제보</h3>
-            <p>클럽 정보 업데이트나 제보는 언제나 환영. 직접 촬영한 룩북 사진 있으면 보내줘. 인스타 태그도 좋아.</p>
-            <p style="font-size: 1.2rem; font-weight: 600;">📱 <a href="tel:01062790862">010-6279-0862</a> (전화/문자)</p>
-            <p style="color: #6b5d4e;">*운영 시간 외에는 문자 남겨주세요. 최대한 빠르게 답할게.</p>
-        </div>
-    </div>
+    <!-- 섹션 4: 목적별 체크리스트 -->
+    <section class="v-box-lhsl">
+      <h2>목적별 체크리스트</h2>
+      <p><strong>문화/예술 목적</strong>일 경우, 전시 공간, 음향 설비, 저작권 문제를 사전에 검토해야 합니다. 참여 아티스트와 사전 계약서를 체결하고, 작품 전시 시 관람 동선을 설계해 혼잡을 최소화합니다.</p>
+      <p><strong>교육·세미나 목적</strong>이라면 강연자 섭외, 자료 배포 방식, 질의응답 시간 확보가 핵심입니다. 온라인 스트리밍을 병행할 경우, 인터넷 대역폭과 장비 테스트를 사전 진행해 끊김 없는 진행을 보장합니다.</p>
+      <p><strong>레저·운동 목적</strong>에서는 공간의 안전성, 바닥재, 그리고 필요 장비(볼, 매트 등)의 준비 상태를 체크합니다. 특히 야외 활동은 날씨 변동에 대비해 비상용 텐트와 방수 장비를 준비하는 것이 좋습니다.</p>
+    </section>
 
-    <div class="footer-note">
-        <div class="container">
-            <p>망원 클럽 룩북 — 매주 업데이트 · 진짜 스타일 · 010-
+    <!-- 섹션 5: FAQ -->
+    <section class="v-box-lhsl">
+      <h2>자주 묻는 질문</h2>
+      <p><strong>Q1. 클럽 회비는 어떻게 설정하나요?</strong> 회비는 활동 규모와 목적에 따라 차등 적용합니다. 소규모 워크숍은 5천원 이하, 대규모 행사나 외부 강연 초청 시에는 1만원 이상을 고려해 예산을 책정합니다. 회비는 투명하게 회계 보고서에 명시하고, 회원에게 정기적으로 공유합니다.</p>
+      <p><strong>Q2. 장소 예약 시 가장 중요한 점은?</strong> 접근성, 설비, 그리고 안전 규정 준수 여부가 핵심입니다. 특히 공공 시설을 이용할 경우 사전 신청 절차와 이용 시간 제한을 확인하고, 예약 확정 후에는 현장 점검을 통해 예정된 설비가 정상 작동하는지 확인합니다.</p>
+      <p><strong>Q3. 신규 회원을 어떻게 모집하나요?</strong> SNS 채널(인스타그램, 페이스북)과 지역 커뮤니티 게시판을 활용해 이벤트를 홍보합니다. 첫 모임에 무료 체험 프로그램을 제공해 관심을 유도하고, 기존 회원의 입소문을 활용하는 것이 가장 효과적입니다.</p>
+    </section>
+  </main>
+
+  <footer class="v-box-lhsl">
+    <small>© 2026 망원 클럽 룩북. 모든 권리 보유.</small>
+  </footer>
 </body>
 </html>
