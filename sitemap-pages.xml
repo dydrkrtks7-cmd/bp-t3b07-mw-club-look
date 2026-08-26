@@ -31,6 +31,61 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://mangwon-club-note.link-hub.org/posts/gemini-coverage-20260719-0500.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mangwon-club-note.link-hub.org/posts/gemini-coverage-20260721-0100.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mangwon-club-note.link-hub.org/posts/gemini-coverage-20260721-0101.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mangwon-club-note.link-hub.org/posts/gemini-coverage-20260721-0102.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mangwon-club-note.link-hub.org/posts/gemini-coverage-20260721-0108.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mangwon-club-note.link-hub.org/posts/normal-2.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mangwon-club-note.link-hub.org/posts/normal-3.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mangwon-club-note.link-hub.org/posts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mangwon-club-note.link-hub.org/posts/juice-1.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mangwon-club-note.link-hub.org/posts/juice-2.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mangwon-club-note.link-hub.org/posts/normal-1.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://mangwon-club-note.link-hub.org/posts/gemini-coverage-20260719-0496.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -51,32 +106,12 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://mangwon-club-note.link-hub.org/posts/gemini-coverage-20260719-0500.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://mangwon-club-note.link-hub.org/posts/gemini-coverage-20260721-0098.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://mangwon-club-note.link-hub.org/posts/gemini-coverage-20260721-0099.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mangwon-club-note.link-hub.org/posts/gemini-coverage-20260721-0100.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mangwon-club-note.link-hub.org/posts/gemini-coverage-20260721-0101.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mangwon-club-note.link-hub.org/posts/gemini-coverage-20260721-0102.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -102,11 +137,6 @@
   </url>
   <url>
     <loc>https://mangwon-club-note.link-hub.org/posts/gemini-coverage-20260721-0107.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mangwon-club-note.link-hub.org/posts/gemini-coverage-20260721-0108.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -177,41 +207,6 @@
   </url>
   <url>
     <loc>https://mangwon-club-note.link-hub.org/posts/gemini-coverage-20260722-0374.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mangwon-club-note.link-hub.org/posts/juice-1.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mangwon-club-note.link-hub.org/posts/juice-2.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mangwon-club-note.link-hub.org/posts/normal-1.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mangwon-club-note.link-hub.org/posts/normal-2.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mangwon-club-note.link-hub.org/posts/normal-3.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mangwon-club-note.link-hub.org/posts.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mangwon-club-note.link-hub.org/posts-2.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
